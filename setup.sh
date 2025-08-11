@@ -9,3 +9,4 @@ sudo apt-get upgrade -y
 
 bash scripts/setup_docker.sh
 bash scripts/setup_nvidia_container.sh
+bash scripts/set_path.sh

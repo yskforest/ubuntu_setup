@@ -1,7 +1,7 @@
 #!/bin/sh
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-CMD_DIR="${SCRIPT_DIR}/cmd"
+CMD_DIR="${SCRIPT_DIR}/../cmd"
 
 chmod -R +x $CMD_DIR
 
@@ -20,7 +20,7 @@ else
     echo "Adding $CMD_DIR to PATH in $SHELL_RC"
     echo "" >> "$SHELL_RC"
     echo "# Added by setup.sh" >> "$SHELL_RC"
-    echo "export PATH=\"$CMD_DIR:\$PATH\"" >> "$SHELL_RC"
+    echo "export PATH=\"$(realpath "$CMD_DIR"):\$PATH\"" >> "$SHELL_RC"
 fi
 
 echo "✅ Done."
