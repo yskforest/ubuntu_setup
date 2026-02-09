@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo apt-get update
-sudo apt-get upgrade -y
+sudo apt update
+sudo apt upgrade -y
 
 # install apt-fast
 # https://github.com/ilikenwf/apt-fast?tab=readme-ov-file#quick-install
